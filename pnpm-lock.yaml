@@ -184,6 +184,9 @@ importers:
       '@angular/router':
         specifier: ^22.2.0
         version: 22.2.3(@angular/common@22.2.3(@angular/core@22.2.3(@angular/compiler@22.2.3)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.2.3(@angular/compiler@22.2.3)(rxjs@7.8.2))(@angular/platform-browser@22.2.3(@angular/common@22.2.3(@angular/core@22.2.3(@angular/compiler@22.2.3)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.2.3(@angular/compiler@22.2.3)(rxjs@7.8.2)))(rxjs@7.8.2)
+      '@line/liff':
+        specifier: ^2.31.2
+        version: 2.31.2(debug@4.4.3(supports-color@8.1.1))(supports-color@8.1.1)
       rxjs:
         specifier: ~7.8.0
         version: 7.8.2
@@ -193,10 +196,10 @@ importers:
     devDependencies:
       '@angular/build':
         specifier: ^22.2.5
-        version: 22.2.5(@angular/compiler-cli@22.2.3(@angular/compiler@22.2.3)(typescript@6.0.3))(@angular/compiler@22.2.3)(@angular/core@22.2.3(@angular/compiler@22.2.3)(rxjs@7.8.2))(@angular/platform-browser@22.2.3(@angular/common@22.2.3(@angular/core@22.2.3(@angular/compiler@22.2.3)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.2.3(@angular/compiler@22.2.3)(rxjs@7.8.2)))(jiti@2.7.0)(postcss@8.5.32)(supports-color@8.1.1)(tailwindcss@4.3.3)(tslib@2.8.1)(typescript@6.0.3)(vitest@5.0.5(jsdom@30.1.3)(vite@8.3.5(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.1)(sass@1.104.1)))
+        version: 22.2.5(@angular/compiler-cli@22.2.3(@angular/compiler@22.2.3)(typescript@6.0.3))(@angular/compiler@22.2.3)(@angular/core@22.2.3(@angular/compiler@22.2.3)(rxjs@7.8.2))(@angular/platform-browser@22.2.3(@angular/common@22.2.3(@angular/core@22.2.3(@angular/compiler@22.2.3)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.2.3(@angular/compiler@22.2.3)(rxjs@7.8.2)))(@types/node@24.19.2)(jiti@2.7.0)(postcss@8.5.32)(supports-color@8.1.1)(tailwindcss@4.3.3)(tslib@2.8.1)(typescript@6.0.3)(vitest@5.0.5(@types/node@24.19.2)(jsdom@30.1.3)(vite@8.3.5(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.1)(sass@1.104.1)))
       '@angular/cli':
         specifier: ^22.2.5
-        version: 22.2.5(chokidar@5.0.0)
+        version: 22.2.5(@types/node@24.19.2)(chokidar@5.0.0)
       '@angular/compiler-cli':
         specifier: ^22.2.0
         version: 22.2.3(@angular/compiler@22.2.3)(typescript@6.0.3)
@@ -220,7 +223,7 @@ importers:
         version: 6.0.3
       vitest:
         specifier: ^5.0.0
-        version: 5.0.5(jsdom@30.1.3)(vite@8.3.5(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.1)(sass@1.104.1))
+        version: 5.0.5(@types/node@24.19.2)(jsdom@30.1.3)(vite@8.3.5(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.1)(sass@1.104.1))
 
 packages:
 
@@ -830,6 +833,259 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
+
+  '@liff/activity@2.31.2':
+    resolution: {integrity: sha512-31pRi2zrNa1hV6voXKqEqm10fZFd/tcck605dt80Ulea1rhdDio7zRDs0TaEO0yNEs+6Gl2ppx+BOV5I6Jv8wg==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/add-to-home-screen@2.31.2':
+    resolution: {integrity: sha512-UsSNO5enVNczk8JI/DkvBCo+SpPz3g2wdfS7T9QIXx84O3XQgMJgku7X8VUx6QNk4Y9LXKfo74smhCVcHI/DfQ==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/analytics@2.31.2':
+    resolution: {integrity: sha512-funcqmAEDHkU7in9DxX/opVnm8Q7UhYuoKA3KN7YrXyk8UYrlLZaErJhuxTR63LaN3vBPfJmoP4PQaaqlXRvVw==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/calendar@2.31.2':
+    resolution: {integrity: sha512-i/8HxJeQPVMOZ2h5zCsqNDgY+VyaqqSy2dnbeTfeOeWM9d86YQ62+YNISciYX52Ur4AJnCgBcARMx0u32Dv8+w==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/check-availability@2.31.2':
+    resolution: {integrity: sha512-KC7mdr9cALh9wlptBYkyyYzItA9pRAL6U+5Ot4AV7C2U9V+DtoSrn/2a7xcS/j0qiKCmOtNQ7QNlbYJfCIHfjw==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/close-window@2.31.2':
+    resolution: {integrity: sha512-fG0/4w7Q4PLCQzzb04zf+FepPxHbYGfn/W0XWSzQYjL6OH+4PK9ooYI8QUbPsiblymNhpcsuF/nU+XX1x3gH5w==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/consts@2.31.2':
+    resolution: {integrity: sha512-dS2vOT6BE4dANnlOJN1yxqyHrT7Pi4Msey769P6yNFYniMs7oiK+nfkZcOnVctXeYpkQGy5/eN2XZVH+8ZkJUw==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/core@2.31.2':
+    resolution: {integrity: sha512-03H5SZBwV8wqfDV8a3aOeZU89sUBRbeJG9WuHtIYheiAF8+y5NYJUyS67Q43pFfYIDzy3b070NGHizi3/8kbfw==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/create-shortcut-on-home-screen@2.31.2':
+    resolution: {integrity: sha512-uOnyAqvsIZhfBrFOAXRWdmjBzpANcQOOrY7A9xaKatO13sM2T9ATVl257RKrwbE+b80JgB2DUxZvxhiBOo+G5w==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/extensions@2.31.2':
+    resolution: {integrity: sha512-InaEJMCnKWfD1MT8LyTRg3rShrrpAMbSpGXVRBXq/gLzRhW84pk7nHAG0x7Q944UPJyziSZBz6HQrIFkTqtF6g==}
+
+  '@liff/get-advertising-id@2.31.2':
+    resolution: {integrity: sha512-xezWGdQyaYGMN2GPTdh+GS0fOPRMwVAnwBo5GlTsdvsW2qdLJl0FSB1SToNryTxKet3JKW9Q2yL7IagDr3ng1w==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/get-app-language@2.31.2':
+    resolution: {integrity: sha512-Cbszg8H6U7SmVAmw8FKC/0xR3gAOdK4hZgyZDSQhhMP49fAVq02rmTW6imL2bWMHwvKMkJK/Qn66MWQvOVRyAA==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/get-friendship@2.31.2':
+    resolution: {integrity: sha512-dJP7l041TLbkc/RsYtRHYBCHLR/zSCRn7Uo2zlbIvQ3fn51TUozGdVnYU3cUBVdkaGR+SO93FIMpCBa3ezXC2g==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/get-language@2.31.2':
+    resolution: {integrity: sha512-CdRSlfO053eunUiExSvnrlllty8ngiJEc1j4AcRNc+UZnOVZiGeKb6/VCSYhoshf1UUAL5klCHOp9H6EfxLmaQ==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/get-line-version@2.31.2':
+    resolution: {integrity: sha512-rhC91mfE7WZ5P7iPx1GMqdj0t3eKm50p23FytVfB9sLIIUX5ikykJjlNsfs/GGpwJ5IAMJJZXh1rB44o7RN7BA==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/get-origins@2.31.2':
+    resolution: {integrity: sha512-BERkqxJBs/a/bPN1bSYD+iDJt93UXHS7qACvsnG5tHuzHM9K54+SWxKxBqGmU1bTGaYHm0A9paewmSZd1UfeSA==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/get-os@2.31.2':
+    resolution: {integrity: sha512-d297bzDo99b/bPK7uEkvvKJrFjLlnTlBcqQgiXD7j1YhFNqQAtupQOcjm60ftPXVs9zN9xa0giZBkdxUjhinJw==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/get-profile@2.31.2':
+    resolution: {integrity: sha512-nqs71TbxQKn1Uo1upRsT4aaX/3K/EL7UG8YCVKAx0WefEMuN/+jm0RTIcfszWL+JDOGAUTJoz1bDzJtaMTv+mQ==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/get-version@2.31.2':
+    resolution: {integrity: sha512-fF7/EjmxXrQH8agUHfSRstDBPM5hpq1Palt11wDeWkRoK2053Cs94ftIdbGfRjn/durKmVG2KL/ei+xoRgB+0Q==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/hooks@2.31.2':
+    resolution: {integrity: sha512-Y/zyoaeALRWLxh+1JVXCBMfcfg17Ay0l82dWvbxdmtVzL5H4xU0UOTwhy6iXXsSdktzBQtEwIwyWZ4DfHRB57Q==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/i18n@2.31.2':
+    resolution: {integrity: sha512-nKG7YcN9miFwoTdHAM+nd4nAultuDaZ5w717ysKDOTY33PcG5NgTI+2szS//0bVTbFx0mYpC4jXObewT/EYb9w==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/iap@2.31.2':
+    resolution: {integrity: sha512-zuw7ClKaOXfGHsMNrPMADmE8obG2xW6IU6OBDALwje9Z4xLvi8UfD/thWo3vx3+r7qKZEeIzgiW3vcQBK7K+tQ==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/init@2.31.2':
+    resolution: {integrity: sha512-Me12Sm+F8K+iokIXL1JsvJTZNRYLRpfY/KvYViZVHrKfV5eAhi9NIecYoFW/mvdoXNfeqU4h/B4S5ocIBYMVsA==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/is-api-available@2.31.2':
+    resolution: {integrity: sha512-bjTt6kLv6dNKE0BZcYwQWFpiWHfsDNn4Rp/lG+LU5rc1mM05V46E7XCMMxAvpB5iQbWd58nhKvvVT9SP+77YtA==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/is-in-client@2.31.2':
+    resolution: {integrity: sha512-qOMSFIIHNsJzZGJ1awhrM0RT3BniqATqreptqZ1oXNqfjfAbb6as9vcZEKtuY7MW6L6AShaPLKQrvPpaXNKNYQ==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/is-logged-in@2.31.2':
+    resolution: {integrity: sha512-92lq9VfdZLCdgenM1LaBftCXaQCEp5fH94GkONN99Ztc6t1u0bWXKpZxQZIHoZdN3CebHLgSpVYSRMKsJezWqQ==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/is-sub-window@2.31.2':
+    resolution: {integrity: sha512-4JIcKTcXzrbE3E8GOigQ/n7VcuIXtY7R79LDLZ4nA/NAYrP5FOorpfqe8nyKt7Rt3R75auKt52kHTlFWOBHO3w==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/liff-types@2.31.2':
+    resolution: {integrity: sha512-hJ0i0SQLtNY2Sgk+XXlkhL2uqth+kHkZiZ9+CtdUoEySD3jxHNd147wYoW6XbD792qZmadadYZXr99odWt+suQ==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/logger@2.31.2':
+    resolution: {integrity: sha512-iG+KLXAWrvfzqjkiwzvglrmUuOud5HvdVIivNfsViFgEDncwfA3suq1y+DHhPlGze1Uvp3K31D0SEVArsNAr+g==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/login@2.31.2':
+    resolution: {integrity: sha512-+b6WjDqCuNxbc3j2WxT20lJ6kUSzzJ7lLyGdYCEwrm27d0Auy8Ej9kfPT6I2SP9fG3/xHN/OVTahDAQMhQ/KXw==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/logout@2.31.2':
+    resolution: {integrity: sha512-Ez3FOYZNsFlfGDpgtyZ2rUikHueuZqCIsuBVwQmdNd2k68OJkJa5y3Bj3nTD+CSHhMPoAGhnuw0FJ/bSd3xqLw==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/message-bus@2.31.2':
+    resolution: {integrity: sha512-xMazPRqdHgCehQNEHRuybGn8Tl4kWlw1amIwysTQxMpoCPOglSXcpYKYYGnfzfMbfDE8KQkhkBmxXRVtIfW0WQ==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/native-bridge@2.31.2':
+    resolution: {integrity: sha512-Qlj12rTOaF7PaOeHgDJIJISBhMyBgUsRrNkHGjmVgoGnkFv6npAMoDJgzdIPzBfGF6VzdK2AZHSLvhHLuo4dEw==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/open-window@2.31.2':
+    resolution: {integrity: sha512-e4+LGNgNomlfOuDTYjvzjWifDBqr8qBc3xlFzKXVaFaKmJ2+1VKVzyWbsp1XlCD1cKCDJLArX1GK541knoZ0gA==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/permanent-link@2.31.2':
+    resolution: {integrity: sha512-vTNzMg64N7RzLWlUhxEDwLe5LGOe0DK8iYVUzi56V5Z3RvvqTdS5OdXFu/Tezks3diPnOoxCHzYbJxQgSeq1dA==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/permission@2.31.2':
+    resolution: {integrity: sha512-ybu5WS1sYMo1LSEfIxNSQMYKAyCrjbsbjiOcYJffzUUlwiyG2+FSk9WfKd3dtU4gJM1LO/kOb7/u5mTIZZDc1Q==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/ready@2.31.2':
+    resolution: {integrity: sha512-ODhg0l1GgyZEodG5uEwDB/r2/UcFV7kLq2x+kzfR6kU9msEEVBcngerlPXCYxXndqUln76vi6lWr+GrPnH3P9Q==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/request-friendship@2.31.2':
+    resolution: {integrity: sha512-a0OQ+POU4FsN4ZiMaeaLKdkUG4RZpGFFdrtuLvwo3NN1xPXTJB4Iy9+HTZ/Z+nY1ois+phTnasbFFie2xSNx6g==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/scan-code-v2@2.31.2':
+    resolution: {integrity: sha512-rMaEWi8pcCdpaXYOhJV8Tg1kj4DSzL+CXuqsJWbirTeMeIequ/pYJERFc8lqOpN+Qm2lWHwALSHNyb9InxY09w==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/scan-code@2.31.2':
+    resolution: {integrity: sha512-kBGInBMs4yiSHiSsC5z9TG6VHkQDQytzbCM66u6rhB0XJng8rGR2EoloG0rRS2TxKMsMuF7dU5Hl35HmeH+8/g==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/send-messages@2.31.2':
+    resolution: {integrity: sha512-ng/q2E5zkWQ8SQudvlSBDUlzpF7Y5tQ80GqEzQyWyclR15ViJZ2T9A76mVv5lVICzBKfPk8UGMf0uYt73Og11A==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/server-api@2.31.2':
+    resolution: {integrity: sha512-8vX/2fJOxaZlj09seg3F5uiBlgQCV/sZ70Tl38c4LGrI+oUPGBpp76vEEvG6MjnAI2M86lsqPHOb79+a4HaeEA==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/share-target-picker@2.31.2':
+    resolution: {integrity: sha512-0jthGYNXpPoBTCi2//yGcQwIsTB5nLIAOS70hSsEF0KaKZ8WoNYPr54MkaxEfAOau2nT6lluL8yGQB4NZRKBTA==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/store@2.31.2':
+    resolution: {integrity: sha512-FX4iIRca0tcTHwP0+BHZde3YdjA+s/j77T/06a3ZSUlk50nLJoxH1oSiO3KHoKcOtZpAmQ7oc+++tjPLbyJTxg==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/sub-window@2.31.2':
+    resolution: {integrity: sha512-Ru23jMqfK+D0uuII6gGlsEWjbAzzYHLuac1qfgn354PTXIdPNdTIpVKg1vWbPCwebCs0zYir5Wfl3zXgNu69IQ==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/types@2.31.2':
+    resolution: {integrity: sha512-u+P/d/+FIL6hBN/qBFlADT80ZAyA5GsoKS8VAjbpyAvMI3Alib0rilhQqvKoOS7pkDVLCUKnsUha8DBbFvFKFQ==}
+
+  '@liff/use@2.31.2':
+    resolution: {integrity: sha512-QeekBWd1pF0pP373qSL5r3tZAn/J0DU307yZcyl2pfTBXDYaSrKcyMLjWuABJM3oirLQG2RyGKoFL0jGYwaGAQ==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/util@2.31.2':
+    resolution: {integrity: sha512-eNLctLrNCcbgnk8IAfzM6eLudAE56wxO5mWUYoIX6P9CSsUtQj+yVLULOKGYzp9CA5Nt96Gziu4hxJol4z4X+A==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/verify-id-token@2.31.2':
+    resolution: {integrity: sha512-xO4ICl8wrVV1gPDt/k2TSgy4VQ89kjpd9PIHgCxpjPskPhkhwAP+vh+MG8RVAzG5ydrOFODYx3RMTpsHz8Rggg==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@liff/window-postmessage@2.31.2':
+    resolution: {integrity: sha512-dvqqS3LvQ+vClAfXUIVZFd+wn7waT/umJWxxje2FbpcjSsUvw7MYswKlQUiteZsgO+AGhnqXlCINwCsKD9CWaQ==}
+    peerDependencies:
+      tslib: ^2.3.0
+
+  '@line/bot-sdk@10.8.0':
+    resolution: {integrity: sha512-1Mdpw/WPS3QP6fGiwPRTL27k8MgmMe7rVKCKsItP/kPzogX7a/X1ipQqk/F6RkorP9DNyJIx590hnVUkfBQf3w==}
+    engines: {node: '>=20'}
+
+  '@line/liff@2.31.2':
+    resolution: {integrity: sha512-U/+B8+2Jc/y9PGngnbWb/CyZZiWEg0yD0rqQ0UdEzqipWdJrxCe36ThTs0vZzIvt1YSs6fqXbJG71ZJJs8nEJA==}
 
   '@listr2/prompt-adapter-inquirer@4.2.7':
     resolution: {integrity: sha512-k180vxSv2KqmnDxoato6pCqEJsov4U5C0EVmldZkAdNeVBxY48A/LM6TCNPGIzDK/iZSfsZP0Mw+gbWc5hXLyA==}
@@ -1461,6 +1717,9 @@ packages:
   '@types/jsesc@2.5.1':
     resolution: {integrity: sha512-9VN+6yxLOPLOav+7PwjZbxiID2bVaeq0ED4qSQmdQTdjnXJSaCVKTR58t15oqH1H5t8Ng2ZX1SabJVoN9Q34bw==}
 
+  '@types/node@24.19.2':
+    resolution: {integrity: sha512-93d49wCWJkCyN87MxLpNN6KXPCwFw7bVUg79mGUV1OS40JGWwVCr8n61DXCSqz7CV6/VfPkb7xec7uP2M+QHWQ==}
+
   '@vitejs/plugin-basic-ssl@2.3.0':
     resolution: {integrity: sha512-bdyo8rB3NnQbikdMpHaML9Z1OZPBu6fFOBo+OtxsBlvMJtysWskmBcnbIDhUqgC8tcxNv/a+BcV5U+2nQMm1OQ==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
@@ -1480,6 +1739,10 @@ packages:
 
   '@vitest/spy@5.0.5':
     resolution: {integrity: sha512-lwJRExuH417257Q5wv9QYugN9IMJkoxcrKrYxGPQkBzl7wlNpTUxD/5yNX4ESKVUIShKPgkGchYPFMWOOk0wzw==}
+
+  agent-base@6.0.2:
+    resolution: {integrity: sha512-RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ==}
+    engines: {node: '>= 6.0.0'}
 
   agent-base@9.0.0:
     resolution: {integrity: sha512-TQf59BsZnytt8GdJKLPfUZ54g/iaUL2OWDSFCCvMOhsHduDQxO8xC4PNeyIkVcA5KwL2phPSv0douC0fgWzmnA==}
@@ -1512,6 +1775,12 @@ packages:
     resolution: {integrity: sha512-Izi8RQcffqCeNVgFigKli1ssklIbpHnCYc6AknXGYoB6grJqyeby7jv12JUQgmTAnIDnbck1uxksT4dzN3PWBA==}
     engines: {node: '>=12'}
 
+  asynckit@0.4.0:
+    resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
+
+  axios@1.21.0:
+    resolution: {integrity: sha512-YCzXMB53Q9PZBsh7yN7wtapit4WepwcHS2fP8QhGsBxSz5YtgYobV7GGlWlAJi+RxfU77GQTQi2DSLUma42EYA==}
+
   baseline-browser-mapping@2.11.34:
     resolution: {integrity: sha512-Aqr8mA1kIvyJ3UY5YAY7ib8LSo1DmDMbMnVqGPtsKW1LxaFQFwn9Eb3yvq2fUKJsRvaXjnAV7R5osqETapzNiA==}
     engines: {node: '>=6.0.0'}
@@ -1535,6 +1804,10 @@ packages:
 
   buffer-from@1.1.2:
     resolution: {integrity: sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==}
+
+  call-bind-apply-helpers@1.0.2:
+    resolution: {integrity: sha512-Sp1ablJ0ivDkSzjcaJdxEunN5/XvksFJ2sMBFfq6x0ryhQV/2b/KwFe21cMpmHtPOSij8K99/wSfoEuTObmuMQ==}
+    engines: {node: '>= 0.4'}
 
   caniuse-lite@1.0.30001820:
     resolution: {integrity: sha512-gfWD6MxqVCqAOwmODfZf7DchWvlrA+SRdNX7ceLfg3xRqe5ssjjpF7EgslC/0tiLiNTajdaNN/q8c/5u/7Gz8w==}
@@ -1577,6 +1850,10 @@ packages:
   colorjs.io@0.7.1:
     resolution: {integrity: sha512-LY7OHnJZxHwT5UlzNa9bbhHHDbzB6yE5+3MIPwJEQKRvSCt/T4G7epsj+9j2BExUIIfXFIJGsIXUKdfrK9Q5tA==}
 
+  combined-stream@1.0.8:
+    resolution: {integrity: sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==}
+    engines: {node: '>= 0.8'}
+
   convert-source-map@1.9.0:
     resolution: {integrity: sha512-ASFBup0Mz1uyiIjANan1jzLQami9z1PoYSZCiiYW2FczPbenXc45FZdBZLzOT+r6+iciuEModtmCti+hjaAk0A==}
 
@@ -1611,6 +1888,10 @@ packages:
   decimal.js@10.6.0:
     resolution: {integrity: sha512-YpgQiITW3JXGntzdUmyUR1V812Hn8T1YVXhCu+wO3OpS4eU9l4YdD3qjyiKdV6mvV29zapkMeD390UVEf2lkUg==}
 
+  delayed-stream@1.0.0:
+    resolution: {integrity: sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ==}
+    engines: {node: '>=0.4.0'}
+
   detect-libc@2.1.2:
     resolution: {integrity: sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==}
     engines: {node: '>=8'}
@@ -1630,6 +1911,10 @@ packages:
   domutils@4.0.2:
     resolution: {integrity: sha512-qI4JLRKnSzqFqr7hAlS5xQDusBCjKSEG4t4+7aNrIQMHBcsC2TGEhuyABJdYkgSewL57PNLYEiibY2iPKhKpaA==}
     engines: {node: '>=20.19.0'}
+
+  dunder-proto@1.0.1:
+    resolution: {integrity: sha512-KIN/nDJBQRcXw0MLVhZE9iQHmG68qAVIBg9CqmUYjmQIhgij9U5MFvrqkUL5FbtyyzZuOeOt0zdeRe4UY7ct+A==}
+    engines: {node: '>= 0.4'}
 
   electron-to-chromium@1.5.467:
     resolution: {integrity: sha512-Nw9X371rtZmYcBSnEijnCDONILjs93biCZO34juC7MBOmK8E+GFnyD4T/WvyrlJkppul7oxg6TwvtKst9SODTw==}
@@ -1653,8 +1938,24 @@ packages:
     resolution: {integrity: sha512-xUtoPkMggbz0MPyPiIWr1Kp4aeWJjDZ6SMvURhimjdZgsRuDplF5/s9hcgGhyXMhs+6vpnuoiZ2kFiu3FMnS8Q==}
     engines: {node: '>=18'}
 
+  es-define-property@1.0.1:
+    resolution: {integrity: sha512-e3nRfgfUZ4rNGL232gUgX06QNyyez04KdjFrF+LTRoOXmrOgFKDg4BCdsjW8EnT69eqdYGmRpJwiPVYNrCaW3g==}
+    engines: {node: '>= 0.4'}
+
+  es-errors@1.3.0:
+    resolution: {integrity: sha512-Zf5H2Kxt2xjTvbJvP2ZWLEICxA6j+hAmMzIlypy4xcBg1vKVnx89Wy0GbS+kf5cwCVFFzdCFh2XSCFNULS6csw==}
+    engines: {node: '>= 0.4'}
+
   es-module-lexer@2.3.2:
     resolution: {integrity: sha512-poHGpORABojJJucnV9KbOavETW8lBVnphkW77ER5/BQ5Fz7oXSoCNek7IH3vR5nRjdsEz926ibFYX8KtLQmdyw==}
+
+  es-object-atoms@1.1.2:
+    resolution: {integrity: sha512-HWcBoN6NileqtSydK2FqHbS/LoDd2pqrnQHLyJzBj4kOp/ky2MWMN694xOfkK8/SnUsW2DH7EfyVlydKCsm1Zw==}
+    engines: {node: '>= 0.4'}
+
+  es-set-tostringtag@2.1.0:
+    resolution: {integrity: sha512-j6vWzfrGVfyXxge+O0x5sh6cvxAog0a/4Rdd2K36zCMV5eJ+/+tOAngRO8cODMNWbVRdVlmGZQL2YS3yR8bIUA==}
+    engines: {node: '>= 0.4'}
 
   esbuild@0.28.2:
     resolution: {integrity: sha512-HKVLS8dvII+xoKW9kmqxbRKrnWEXfJJr/FZhhJmiqIB0e053QNYFqOBouTMO/k5sID4MvCiUCvv8b9M4h32wIA==}
@@ -1700,10 +2001,26 @@ packages:
     resolution: {integrity: sha512-kWyh8ADvHBFz6ua5xYOPnUroZTT/bwWfrCeL0Wj1dzG4/YOmOcfJ99W8dOVyyynJN35rZ9aCOtHChqQovV7yog==}
     engines: {node: '>=6'}
 
+  follow-redirects@1.16.2:
+    resolution: {integrity: sha512-/kVP2U8z596Ia0gwFrwyIeo74ta5aVmSeU1FfAUMAmcEP5EP7zydmag3SLiN64NaRKef3lxsq7i/g7ltJQDGow==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+
+  form-data@4.0.6:
+    resolution: {integrity: sha512-vKatAh4SlVfgbv+YtmhiRjhEMJsYpsG1Y2rMQtR+SVSbytsSD1YGzDIcrAJmdFec88u/+VoGmxnl+80gL1tRCQ==}
+    engines: {node: '>= 6'}
+
   fsevents@2.3.3:
     resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
+
+  function-bind@1.1.2:
+    resolution: {integrity: sha512-7XHNxH7qX9xG5mIwxkhumTox/MIRNcOgDrxWsMt2pAr23WHp6MrRlN7FBSFpCpr+oVO0F744iUgR82nJMfG2SA==}
 
   gensync@1.0.0-beta.2:
     resolution: {integrity: sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==}
@@ -1717,12 +2034,36 @@ packages:
     resolution: {integrity: sha512-XjH1AECxf0giL2V1aU8vKyRR2ppRUb5c0EvT7zuJTokQ74bNo52zOtghqdWIqrhUD79fo3x0WfKZdOqxF6LG1Q==}
     engines: {node: '>=18'}
 
+  get-intrinsic@1.3.0:
+    resolution: {integrity: sha512-9fSjSaos/fRIVIp+xSJlE6lfwhES7LNtKaCBIamHsjr2na1BiABJPo0mOjjz8GJDURarmCPGqaiVg5mfjb98CQ==}
+    engines: {node: '>= 0.4'}
+
+  get-proto@1.0.1:
+    resolution: {integrity: sha512-sTSfBjoXBp89JvIKIefqw7U2CCebsc74kiY6awiGogKtoSGbgjYE/G/+l9sF3MWFPNc9IcoOC4ODfKHfxFmp0g==}
+    engines: {node: '>= 0.4'}
+
+  gopd@1.2.0:
+    resolution: {integrity: sha512-ZUKRh6/kUFoAiTAtTYPZJ3hw9wNxx+BIBOijnlG9PnrJsCcSjs1wyyD6vJpaYtgnzDrKYRSqf3OO6Rfa93xsRg==}
+    engines: {node: '>= 0.4'}
+
   graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
 
   has-flag@4.0.0:
     resolution: {integrity: sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==}
     engines: {node: '>=8'}
+
+  has-symbols@1.1.0:
+    resolution: {integrity: sha512-1cDNdwJ2Jaohmb3sg4OmKaMBwuC48sYni5HUw2DvsC8LjGTLK9h+eb1X6RyuOHe4hT0ULCW68iomhjUoKUqlPQ==}
+    engines: {node: '>= 0.4'}
+
+  has-tostringtag@1.0.2:
+    resolution: {integrity: sha512-NqADB8VjPFLM2V0VvHUewwwsw0ZWBaIdgo+ieHtK3hasLz4qeCRjYcqfB6AQrBggRKppKF8L52/VqdVsO47Dlw==}
+    engines: {node: '>= 0.4'}
+
+  hasown@2.0.4:
+    resolution: {integrity: sha512-T2UbfbBEF32wiepXIsMlTW9+dDYC6wMh/t/vYA4tuOMKqWz/n3vr1NFSxQiyP+zk2mXsoMA/i/7qV6LKut1t1A==}
+    engines: {node: '>= 0.4'}
 
   hosted-git-info@10.1.1:
     resolution: {integrity: sha512-DeOnSPAvOndYKfw075gt8yZzQ7S2hNztw34zBTfhIzLhmBTswIBg5/y+pqu/VD5cYWm5goAFTusDmUEmKZ0PEQ==}
@@ -1735,6 +2076,10 @@ packages:
   htmlparser2@12.0.0:
     resolution: {integrity: sha512-Tz7u1i95/g2x2jz81+x0FBVhBhY5aRTvD3tXXdFaljuNdzDLJ8UGNRrTcj2cgQvAg3iW/h77Fz15nLW0L0CrZw==}
     engines: {node: '>=20.19.0'}
+
+  https-proxy-agent@5.0.1:
+    resolution: {integrity: sha512-dFcAjpTQFgoLMzC2VwU+C/CbS7uRL0lWmxDITmqm7C+7F0Odmj6s9l6alZc6AELXhrnggM2CeWSXHGOdX2YtwA==}
+    engines: {node: '>= 6'}
 
   https-proxy-agent@9.1.0:
     resolution: {integrity: sha512-ag87y7cJJ9/3+GxFr8Oy4O5faDsGRGnBGsJj/YjOSsSx/5eadKLYTMPlzuR6obgoCDDm0abAAZitXXQkMOPSpA==}
@@ -1982,8 +2327,20 @@ packages:
   magic-string@1.4.5:
     resolution: {integrity: sha512-oLLC2+YvQUfAa+vxoufE/yc1icb87M9iXIRqAoR/2EhE/8cb3SF/+Gi0c2By1B+5Vz2e2vQtUvHiu1+63Znh+w==}
 
+  math-intrinsics@1.1.0:
+    resolution: {integrity: sha512-/IXtbwEk5HTPyEwyKX6hGkYXxM9nbj64B+ilVJnC/R6B0pH5G4V3b0pVbL7DBj4tkhBAppbQUlf6F6Xl9LHu1g==}
+    engines: {node: '>= 0.4'}
+
   mdn-data@2.27.1:
     resolution: {integrity: sha512-9Yubnt3e8A0OKwxYSXyhLymGW4sCufcLG6VdiDdUGVkPhpqLxlvP5vl1983gQjJl3tqbrM731mjaZaP68AgosQ==}
+
+  mime-db@1.52.0:
+    resolution: {integrity: sha512-sPU4uV7dYlvtWJxwwxHD0PuihVNiE7TyAbQ5SWxDCB9mUYvOgroQOwYQQOKPJ8CIbE+1ETVlOoK1UC2nU3gYvg==}
+    engines: {node: '>= 0.6'}
+
+  mime-types@2.1.35:
+    resolution: {integrity: sha512-ZDY+bPm5zTTF+YpCrAU9nK0UgICYPT0QtT1NZWFv4s++TNkcgVaT0g6+4R2uI4MjQjzysHB1zxuWL50hzaeXiw==}
+    engines: {node: '>= 0.6'}
 
   mimic-function@5.0.1:
     resolution: {integrity: sha512-VP79XUPxV2CigYP3jWwAUFSku2aKqBH7uTAapFWCBqutsbmDo96KY5o8uh6U+/YSIn5OxJnXp73beVkpqMIGhA==}
@@ -2107,6 +2464,10 @@ packages:
     peerDependenciesMeta:
       kerberos:
         optional: true
+
+  proxy-from-env@2.1.0:
+    resolution: {integrity: sha512-cJ+oHTW1VAEa8cJslgmUZrc+sjRKgAKl3Zyse6+PV38hZe/V6Z14TbCuXcan9F9ghlz4QrFr2c92TNF82UkYHA==}
+    engines: {node: '>=10'}
 
   punycode@2.3.1:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
@@ -2330,6 +2691,9 @@ packages:
     resolution: {integrity: sha512-uxc/zpqFg6x7C8vOE7lh6Lbda8eEL9zmVm/PLeTPBRhh1xCgdWaQ+J1CUieGpIfm2HdtsUpRv+HshiasBMcc6A==}
     engines: {node: '>=6'}
 
+  tiny-sha256@1.0.2:
+    resolution: {integrity: sha512-IdsPtu8eJ0SwuCWUFm2euFH3jJvtpGQC0VpZNZlqxRvQ2zGvSjbXDO+4T8Rm5ETsmCQHHvKUGds69bJYrlb3Tg==}
+
   tinybench@6.2.2:
     resolution: {integrity: sha512-nIZ2N2dFpjBsg2hgitKu7mA+FvsIJuGJOwysRngmVRRmWgR/UyPjwJj8c/fT/dhm8EkHnF5EOogRf+0Z2qrimA==}
     engines: {node: '>=20.0.0'}
@@ -2364,6 +2728,9 @@ packages:
     resolution: {integrity: sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==}
     engines: {node: '>=14.17'}
     hasBin: true
+
+  undici-types@7.24.6:
+    resolution: {integrity: sha512-WRNW+sJgj5OBN4/0JpHFqtqzhpbnV0GuB+OozA9gCL7a993SmU+1JBZCzLNxYsbMfIeDL+lTsphD5jN5N+n0zg==}
 
   undici@8.12.3:
     resolution: {integrity: sha512-+fdndUTwBP86cVjihTp21hZHo7d6oj1c/47XPA3lL8mM0XHs+C4EkcjmgRsFnFk2f/UONGDy9ItBItmXsLOQHw==}
@@ -2485,6 +2852,9 @@ packages:
     resolution: {integrity: sha512-BMhLD/Sw+GbJC21C/UgyaZX41nPt8bUTg+jWyDeg7e7YN4xOM05YPSIXceACnXVtqyEw/LMClUQMtMZ+PGGpqQ==}
     engines: {node: '>=20'}
 
+  whatwg-fetch@3.6.20:
+    resolution: {integrity: sha512-EqhiFU6daOA8kpjOWTL0olhVOF3i7OrFzSYiGsEMB8GcXS+RrzauAERX65xMeNWVqxA6HXH2m69Z9LaKKdisfg==}
+
   whatwg-mimetype@5.0.0:
     resolution: {integrity: sha512-sXcNcHOC51uPGF0P/D4NVtrkjSU2fNsm9iog4ZvZJsL3rjoDAzXZhkm2MWt1y+PUdggKAYVoMAIYcs78wJ51Cw==}
     engines: {node: '>=20'}
@@ -2579,16 +2949,16 @@ snapshots:
     transitivePeerDependencies:
       - chokidar
 
-  '@angular/build@22.2.5(@angular/compiler-cli@22.2.3(@angular/compiler@22.2.3)(typescript@6.0.3))(@angular/compiler@22.2.3)(@angular/core@22.2.3(@angular/compiler@22.2.3)(rxjs@7.8.2))(@angular/platform-browser@22.2.3(@angular/common@22.2.3(@angular/core@22.2.3(@angular/compiler@22.2.3)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.2.3(@angular/compiler@22.2.3)(rxjs@7.8.2)))(jiti@2.7.0)(postcss@8.5.32)(supports-color@8.1.1)(tailwindcss@4.3.3)(tslib@2.8.1)(typescript@6.0.3)(vitest@5.0.5(jsdom@30.1.3)(vite@8.3.5(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.1)(sass@1.104.1)))':
+  '@angular/build@22.2.5(@angular/compiler-cli@22.2.3(@angular/compiler@22.2.3)(typescript@6.0.3))(@angular/compiler@22.2.3)(@angular/core@22.2.3(@angular/compiler@22.2.3)(rxjs@7.8.2))(@angular/platform-browser@22.2.3(@angular/common@22.2.3(@angular/core@22.2.3(@angular/compiler@22.2.3)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.2.3(@angular/compiler@22.2.3)(rxjs@7.8.2)))(@types/node@24.19.2)(jiti@2.7.0)(postcss@8.5.32)(supports-color@8.1.1)(tailwindcss@4.3.3)(tslib@2.8.1)(typescript@6.0.3)(vitest@5.0.5(@types/node@24.19.2)(jsdom@30.1.3)(vite@8.3.5(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.1)(sass@1.104.1)))':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@angular-devkit/architect': 0.2202.5(chokidar@5.0.0)
       '@angular/compiler': 22.2.3
       '@angular/compiler-cli': 22.2.3(@angular/compiler@22.2.3)(typescript@6.0.3)
       '@babel/core': 8.0.5
-      '@inquirer/confirm': 6.3.2
+      '@inquirer/confirm': 6.3.2(@types/node@24.19.2)
       '@parcel/watcher': 2.6.0
-      '@vitejs/plugin-basic-ssl': 2.3.0(vite@8.3.5(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.1)(sass@1.104.1))
+      '@vitejs/plugin-basic-ssl': 2.3.0(vite@8.3.5(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.1)(sass@1.104.1))
       beasties: 0.5.4
       browserslist: 4.29.5
       chokidar: 5.0.0
@@ -2610,7 +2980,7 @@ snapshots:
       tinyglobby: 0.2.17
       tslib: 2.8.1
       typescript: 6.0.3
-      vite: 8.3.5(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.1)(sass@1.104.1)
+      vite: 8.3.5(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.1)(sass@1.104.1)
       xxhash-wasm: 1.1.0
     optionalDependencies:
       '@angular/core': 22.2.3(@angular/compiler@22.2.3)(rxjs@7.8.2)
@@ -2619,7 +2989,7 @@ snapshots:
       lmdb: 3.5.6
       postcss: 8.5.32
       tailwindcss: 4.3.3
-      vitest: 5.0.5(jsdom@30.1.3)(vite@8.3.5(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.1)(sass@1.104.1))
+      vitest: 5.0.5(@types/node@24.19.2)(jsdom@30.1.3)(vite@8.3.5(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.1)(sass@1.104.1))
     transitivePeerDependencies:
       - '@types/node'
       - '@vitejs/devtools'
@@ -2632,13 +3002,13 @@ snapshots:
       - tsx
       - yaml
 
-  '@angular/cli@22.2.5(chokidar@5.0.0)':
+  '@angular/cli@22.2.5(@types/node@24.19.2)(chokidar@5.0.0)':
     dependencies:
       '@angular-devkit/architect': 0.2202.5(chokidar@5.0.0)
       '@angular-devkit/core': 22.2.5(chokidar@5.0.0)
       '@angular-devkit/schematics': 22.2.5(chokidar@5.0.0)
-      '@inquirer/prompts': 8.7.2
-      '@listr2/prompt-adapter-inquirer': 4.2.7(@inquirer/prompts@8.7.2)(listr2@11.1.0)
+      '@inquirer/prompts': 8.7.2(@types/node@24.19.2)
+      '@listr2/prompt-adapter-inquirer': 4.2.7(@inquirer/prompts@8.7.2(@types/node@24.19.2))(@types/node@24.19.2)(listr2@11.1.0)
       '@modelcontextprotocol/server': 2.3.1
       '@schematics/angular': 22.2.5(chokidar@5.0.0)
       jsonc-parser: 3.3.1
@@ -2953,101 +3323,133 @@ snapshots:
 
   '@inquirer/ansi@2.0.10': {}
 
-  '@inquirer/checkbox@5.2.8':
+  '@inquirer/checkbox@5.2.8(@types/node@24.19.2)':
     dependencies:
       '@inquirer/ansi': 2.0.10
-      '@inquirer/core': 12.0.6
+      '@inquirer/core': 12.0.6(@types/node@24.19.2)
       '@inquirer/figures': 2.0.10
-      '@inquirer/type': 4.2.1
+      '@inquirer/type': 4.2.1(@types/node@24.19.2)
+    optionalDependencies:
+      '@types/node': 24.19.2
 
-  '@inquirer/confirm@6.3.2':
+  '@inquirer/confirm@6.3.2(@types/node@24.19.2)':
     dependencies:
-      '@inquirer/core': 12.0.6
-      '@inquirer/type': 4.1.1
+      '@inquirer/core': 12.0.6(@types/node@24.19.2)
+      '@inquirer/type': 4.1.1(@types/node@24.19.2)
+    optionalDependencies:
+      '@types/node': 24.19.2
 
-  '@inquirer/confirm@6.3.5':
+  '@inquirer/confirm@6.3.5(@types/node@24.19.2)':
     dependencies:
-      '@inquirer/core': 12.0.6
-      '@inquirer/type': 4.2.1
+      '@inquirer/core': 12.0.6(@types/node@24.19.2)
+      '@inquirer/type': 4.2.1(@types/node@24.19.2)
+    optionalDependencies:
+      '@types/node': 24.19.2
 
-  '@inquirer/core@12.0.6':
+  '@inquirer/core@12.0.6(@types/node@24.19.2)':
     dependencies:
       '@inquirer/ansi': 2.0.10
       '@inquirer/figures': 2.0.10
-      '@inquirer/type': 4.2.1
+      '@inquirer/type': 4.2.1(@types/node@24.19.2)
       cli-width: 4.1.0
       fast-wrap-ansi: 0.2.2
       mute-stream: 3.0.0
       signal-exit: 4.1.0
+    optionalDependencies:
+      '@types/node': 24.19.2
 
-  '@inquirer/editor@5.3.6':
+  '@inquirer/editor@5.3.6(@types/node@24.19.2)':
     dependencies:
-      '@inquirer/core': 12.0.6
-      '@inquirer/external-editor': 3.0.7
-      '@inquirer/type': 4.2.1
+      '@inquirer/core': 12.0.6(@types/node@24.19.2)
+      '@inquirer/external-editor': 3.0.7(@types/node@24.19.2)
+      '@inquirer/type': 4.2.1(@types/node@24.19.2)
+    optionalDependencies:
+      '@types/node': 24.19.2
 
-  '@inquirer/expand@5.1.8':
+  '@inquirer/expand@5.1.8(@types/node@24.19.2)':
     dependencies:
-      '@inquirer/core': 12.0.6
-      '@inquirer/type': 4.2.1
+      '@inquirer/core': 12.0.6(@types/node@24.19.2)
+      '@inquirer/type': 4.2.1(@types/node@24.19.2)
+    optionalDependencies:
+      '@types/node': 24.19.2
 
-  '@inquirer/external-editor@3.0.7':
+  '@inquirer/external-editor@3.0.7(@types/node@24.19.2)':
     dependencies:
       chardet: 2.2.0
       iconv-lite: 0.7.3
+    optionalDependencies:
+      '@types/node': 24.19.2
 
   '@inquirer/figures@2.0.10': {}
 
-  '@inquirer/input@5.1.9':
+  '@inquirer/input@5.1.9(@types/node@24.19.2)':
     dependencies:
-      '@inquirer/core': 12.0.6
-      '@inquirer/type': 4.2.1
+      '@inquirer/core': 12.0.6(@types/node@24.19.2)
+      '@inquirer/type': 4.2.1(@types/node@24.19.2)
+    optionalDependencies:
+      '@types/node': 24.19.2
 
-  '@inquirer/number@4.2.6':
+  '@inquirer/number@4.2.6(@types/node@24.19.2)':
     dependencies:
-      '@inquirer/core': 12.0.6
-      '@inquirer/type': 4.2.1
+      '@inquirer/core': 12.0.6(@types/node@24.19.2)
+      '@inquirer/type': 4.2.1(@types/node@24.19.2)
+    optionalDependencies:
+      '@types/node': 24.19.2
 
-  '@inquirer/password@5.2.5':
-    dependencies:
-      '@inquirer/ansi': 2.0.10
-      '@inquirer/core': 12.0.6
-      '@inquirer/type': 4.2.1
-
-  '@inquirer/prompts@8.7.2':
-    dependencies:
-      '@inquirer/checkbox': 5.2.8
-      '@inquirer/confirm': 6.3.5
-      '@inquirer/editor': 5.3.6
-      '@inquirer/expand': 5.1.8
-      '@inquirer/input': 5.1.9
-      '@inquirer/number': 4.2.6
-      '@inquirer/password': 5.2.5
-      '@inquirer/rawlist': 5.3.8
-      '@inquirer/search': 4.3.6
-      '@inquirer/select': 5.2.8
-
-  '@inquirer/rawlist@5.3.8':
-    dependencies:
-      '@inquirer/core': 12.0.6
-      '@inquirer/type': 4.2.1
-
-  '@inquirer/search@4.3.6':
-    dependencies:
-      '@inquirer/core': 12.0.6
-      '@inquirer/figures': 2.0.10
-      '@inquirer/type': 4.2.1
-
-  '@inquirer/select@5.2.8':
+  '@inquirer/password@5.2.5(@types/node@24.19.2)':
     dependencies:
       '@inquirer/ansi': 2.0.10
-      '@inquirer/core': 12.0.6
+      '@inquirer/core': 12.0.6(@types/node@24.19.2)
+      '@inquirer/type': 4.2.1(@types/node@24.19.2)
+    optionalDependencies:
+      '@types/node': 24.19.2
+
+  '@inquirer/prompts@8.7.2(@types/node@24.19.2)':
+    dependencies:
+      '@inquirer/checkbox': 5.2.8(@types/node@24.19.2)
+      '@inquirer/confirm': 6.3.5(@types/node@24.19.2)
+      '@inquirer/editor': 5.3.6(@types/node@24.19.2)
+      '@inquirer/expand': 5.1.8(@types/node@24.19.2)
+      '@inquirer/input': 5.1.9(@types/node@24.19.2)
+      '@inquirer/number': 4.2.6(@types/node@24.19.2)
+      '@inquirer/password': 5.2.5(@types/node@24.19.2)
+      '@inquirer/rawlist': 5.3.8(@types/node@24.19.2)
+      '@inquirer/search': 4.3.6(@types/node@24.19.2)
+      '@inquirer/select': 5.2.8(@types/node@24.19.2)
+    optionalDependencies:
+      '@types/node': 24.19.2
+
+  '@inquirer/rawlist@5.3.8(@types/node@24.19.2)':
+    dependencies:
+      '@inquirer/core': 12.0.6(@types/node@24.19.2)
+      '@inquirer/type': 4.2.1(@types/node@24.19.2)
+    optionalDependencies:
+      '@types/node': 24.19.2
+
+  '@inquirer/search@4.3.6(@types/node@24.19.2)':
+    dependencies:
+      '@inquirer/core': 12.0.6(@types/node@24.19.2)
       '@inquirer/figures': 2.0.10
-      '@inquirer/type': 4.2.1
+      '@inquirer/type': 4.2.1(@types/node@24.19.2)
+    optionalDependencies:
+      '@types/node': 24.19.2
 
-  '@inquirer/type@4.1.1': {}
+  '@inquirer/select@5.2.8(@types/node@24.19.2)':
+    dependencies:
+      '@inquirer/ansi': 2.0.10
+      '@inquirer/core': 12.0.6(@types/node@24.19.2)
+      '@inquirer/figures': 2.0.10
+      '@inquirer/type': 4.2.1(@types/node@24.19.2)
+    optionalDependencies:
+      '@types/node': 24.19.2
 
-  '@inquirer/type@4.2.1': {}
+  '@inquirer/type@4.1.1(@types/node@24.19.2)':
+    optionalDependencies:
+      '@types/node': 24.19.2
+
+  '@inquirer/type@4.2.1(@types/node@24.19.2)':
+    optionalDependencies:
+      '@types/node': 24.19.2
 
   '@jridgewell/gen-mapping@0.3.13':
     dependencies:
@@ -3073,10 +3475,558 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.6.0
 
-  '@listr2/prompt-adapter-inquirer@4.2.7(@inquirer/prompts@8.7.2)(listr2@11.1.0)':
+  '@liff/activity@2.31.2(tslib@2.8.1)':
     dependencies:
-      '@inquirer/prompts': 8.7.2
-      '@inquirer/type': 4.2.1
+      '@liff/consts': 2.31.2(tslib@2.8.1)
+      '@liff/is-api-available': 2.31.2(tslib@2.8.1)
+      '@liff/is-in-client': 2.31.2(tslib@2.8.1)
+      '@liff/native-bridge': 2.31.2(tslib@2.8.1)
+      '@liff/use': 2.31.2(tslib@2.8.1)
+      '@liff/util': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+
+  '@liff/add-to-home-screen@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/consts': 2.31.2(tslib@2.8.1)
+      '@liff/open-window': 2.31.2(tslib@2.8.1)
+      '@liff/types': 2.31.2
+      '@liff/util': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+
+  '@liff/analytics@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/consts': 2.31.2(tslib@2.8.1)
+      '@liff/core': 2.31.2(tslib@2.8.1)
+      '@liff/get-profile': 2.31.2(tslib@2.8.1)
+      '@liff/get-version': 2.31.2(tslib@2.8.1)
+      '@liff/is-logged-in': 2.31.2(tslib@2.8.1)
+      '@liff/logger': 2.31.2(tslib@2.8.1)
+      '@liff/store': 2.31.2(tslib@2.8.1)
+      '@liff/types': 2.31.2
+      '@liff/use': 2.31.2(tslib@2.8.1)
+      '@liff/util': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+
+  '@liff/calendar@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/consts': 2.31.2(tslib@2.8.1)
+      '@liff/is-api-available': 2.31.2(tslib@2.8.1)
+      '@liff/native-bridge': 2.31.2(tslib@2.8.1)
+      '@liff/use': 2.31.2(tslib@2.8.1)
+      '@liff/util': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+
+  '@liff/check-availability@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/get-version': 2.31.2(tslib@2.8.1)
+      '@liff/is-api-available': 2.31.2(tslib@2.8.1)
+      '@liff/types': 2.31.2
+      '@liff/util': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+
+  '@liff/close-window@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/get-line-version': 2.31.2(tslib@2.8.1)
+      '@liff/get-os': 2.31.2(tslib@2.8.1)
+      '@liff/native-bridge': 2.31.2(tslib@2.8.1)
+      '@liff/types': 2.31.2
+      '@liff/use': 2.31.2(tslib@2.8.1)
+      '@liff/util': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+
+  '@liff/consts@2.31.2(tslib@2.8.1)':
+    dependencies:
+      tslib: 2.8.1
+
+  '@liff/core@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/get-version': 2.31.2(tslib@2.8.1)
+      '@liff/init': 2.31.2(tslib@2.8.1)
+      '@liff/native-bridge': 2.31.2(tslib@2.8.1)
+      '@liff/ready': 2.31.2(tslib@2.8.1)
+      '@liff/store': 2.31.2(tslib@2.8.1)
+      '@liff/use': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+
+  '@liff/create-shortcut-on-home-screen@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/consts': 2.31.2(tslib@2.8.1)
+      '@liff/get-os': 2.31.2(tslib@2.8.1)
+      '@liff/is-api-available': 2.31.2(tslib@2.8.1)
+      '@liff/is-in-client': 2.31.2(tslib@2.8.1)
+      '@liff/open-window': 2.31.2(tslib@2.8.1)
+      '@liff/permanent-link': 2.31.2(tslib@2.8.1)
+      '@liff/server-api': 2.31.2(tslib@2.8.1)
+      '@liff/store': 2.31.2(tslib@2.8.1)
+      '@liff/use': 2.31.2(tslib@2.8.1)
+      '@liff/util': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+
+  '@liff/extensions@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/add-to-home-screen': 2.31.2(tslib@2.8.1)
+      '@liff/check-availability': 2.31.2(tslib@2.8.1)
+      '@liff/consts': 2.31.2(tslib@2.8.1)
+      '@liff/get-advertising-id': 2.31.2(tslib@2.8.1)
+      '@liff/get-line-version': 2.31.2(tslib@2.8.1)
+      '@liff/get-os': 2.31.2(tslib@2.8.1)
+      '@liff/logger': 2.31.2(tslib@2.8.1)
+      '@liff/scan-code': 2.31.2(tslib@2.8.1)
+      '@liff/store': 2.31.2(tslib@2.8.1)
+      '@liff/types': 2.31.2
+      '@liff/util': 2.31.2(tslib@2.8.1)
+    transitivePeerDependencies:
+      - tslib
+
+  '@liff/get-advertising-id@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/types': 2.31.2
+      tslib: 2.8.1
+
+  '@liff/get-app-language@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/get-line-version': 2.31.2(tslib@2.8.1)
+      '@liff/get-os': 2.31.2(tslib@2.8.1)
+      '@liff/is-in-client': 2.31.2(tslib@2.8.1)
+      '@liff/use': 2.31.2(tslib@2.8.1)
+      '@liff/util': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+
+  '@liff/get-friendship@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/consts': 2.31.2(tslib@2.8.1)
+      '@liff/permission': 2.31.2(tslib@2.8.1)
+      '@liff/server-api': 2.31.2(tslib@2.8.1)
+      '@liff/use': 2.31.2(tslib@2.8.1)
+      '@liff/util': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+
+  '@liff/get-language@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/use': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+
+  '@liff/get-line-version@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/use': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+
+  '@liff/get-origins@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/use': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+
+  '@liff/get-os@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/use': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+
+  '@liff/get-profile@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/permission': 2.31.2(tslib@2.8.1)
+      '@liff/server-api': 2.31.2(tslib@2.8.1)
+      '@liff/use': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+
+  '@liff/get-version@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/use': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+
+  '@liff/hooks@2.31.2(tslib@2.8.1)':
+    dependencies:
+      tslib: 2.8.1
+
+  '@liff/i18n@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/consts': 2.31.2(tslib@2.8.1)
+      '@liff/logger': 2.31.2(tslib@2.8.1)
+      '@liff/server-api': 2.31.2(tslib@2.8.1)
+      '@liff/use': 2.31.2(tslib@2.8.1)
+      '@liff/util': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+
+  '@liff/iap@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/consts': 2.31.2(tslib@2.8.1)
+      '@liff/is-api-available': 2.31.2(tslib@2.8.1)
+      '@liff/native-bridge': 2.31.2(tslib@2.8.1)
+      '@liff/store': 2.31.2(tslib@2.8.1)
+      '@liff/use': 2.31.2(tslib@2.8.1)
+      '@liff/util': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+
+  '@liff/init@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/check-availability': 2.31.2(tslib@2.8.1)
+      '@liff/close-window': 2.31.2(tslib@2.8.1)
+      '@liff/consts': 2.31.2(tslib@2.8.1)
+      '@liff/extensions': 2.31.2(tslib@2.8.1)
+      '@liff/get-line-version': 2.31.2(tslib@2.8.1)
+      '@liff/get-os': 2.31.2(tslib@2.8.1)
+      '@liff/hooks': 2.31.2(tslib@2.8.1)
+      '@liff/i18n': 2.31.2(tslib@2.8.1)
+      '@liff/is-api-available': 2.31.2(tslib@2.8.1)
+      '@liff/is-in-client': 2.31.2(tslib@2.8.1)
+      '@liff/is-logged-in': 2.31.2(tslib@2.8.1)
+      '@liff/is-sub-window': 2.31.2(tslib@2.8.1)
+      '@liff/logger': 2.31.2(tslib@2.8.1)
+      '@liff/login': 2.31.2(tslib@2.8.1)
+      '@liff/logout': 2.31.2(tslib@2.8.1)
+      '@liff/message-bus': 2.31.2(tslib@2.8.1)
+      '@liff/native-bridge': 2.31.2(tslib@2.8.1)
+      '@liff/permanent-link': 2.31.2(tslib@2.8.1)
+      '@liff/ready': 2.31.2(tslib@2.8.1)
+      '@liff/server-api': 2.31.2(tslib@2.8.1)
+      '@liff/store': 2.31.2(tslib@2.8.1)
+      '@liff/sub-window': 2.31.2(tslib@2.8.1)
+      '@liff/types': 2.31.2
+      '@liff/use': 2.31.2(tslib@2.8.1)
+      '@liff/util': 2.31.2(tslib@2.8.1)
+      '@liff/verify-id-token': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+
+  '@liff/is-api-available@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/consts': 2.31.2(tslib@2.8.1)
+      '@liff/get-line-version': 2.31.2(tslib@2.8.1)
+      '@liff/get-os': 2.31.2(tslib@2.8.1)
+      '@liff/is-in-client': 2.31.2(tslib@2.8.1)
+      '@liff/is-logged-in': 2.31.2(tslib@2.8.1)
+      '@liff/is-sub-window': 2.31.2(tslib@2.8.1)
+      '@liff/store': 2.31.2(tslib@2.8.1)
+      '@liff/use': 2.31.2(tslib@2.8.1)
+      '@liff/util': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+
+  '@liff/is-in-client@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/consts': 2.31.2(tslib@2.8.1)
+      '@liff/use': 2.31.2(tslib@2.8.1)
+      '@liff/util': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+
+  '@liff/is-logged-in@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/store': 2.31.2(tslib@2.8.1)
+      '@liff/use': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+
+  '@liff/is-sub-window@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/consts': 2.31.2(tslib@2.8.1)
+      '@liff/is-in-client': 2.31.2(tslib@2.8.1)
+      '@liff/store': 2.31.2(tslib@2.8.1)
+      '@liff/use': 2.31.2(tslib@2.8.1)
+      '@liff/util': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+
+  '@liff/liff-types@2.31.2(debug@4.4.3(supports-color@8.1.1))(supports-color@8.1.1)(tslib@2.8.1)':
+    dependencies:
+      '@liff/activity': 2.31.2(tslib@2.8.1)
+      '@liff/analytics': 2.31.2(tslib@2.8.1)
+      '@liff/calendar': 2.31.2(tslib@2.8.1)
+      '@liff/close-window': 2.31.2(tslib@2.8.1)
+      '@liff/create-shortcut-on-home-screen': 2.31.2(tslib@2.8.1)
+      '@liff/get-app-language': 2.31.2(tslib@2.8.1)
+      '@liff/get-friendship': 2.31.2(tslib@2.8.1)
+      '@liff/get-language': 2.31.2(tslib@2.8.1)
+      '@liff/get-line-version': 2.31.2(tslib@2.8.1)
+      '@liff/get-origins': 2.31.2(tslib@2.8.1)
+      '@liff/get-os': 2.31.2(tslib@2.8.1)
+      '@liff/get-profile': 2.31.2(tslib@2.8.1)
+      '@liff/get-version': 2.31.2(tslib@2.8.1)
+      '@liff/i18n': 2.31.2(tslib@2.8.1)
+      '@liff/iap': 2.31.2(tslib@2.8.1)
+      '@liff/init': 2.31.2(tslib@2.8.1)
+      '@liff/is-api-available': 2.31.2(tslib@2.8.1)
+      '@liff/is-in-client': 2.31.2(tslib@2.8.1)
+      '@liff/is-logged-in': 2.31.2(tslib@2.8.1)
+      '@liff/is-sub-window': 2.31.2(tslib@2.8.1)
+      '@liff/login': 2.31.2(tslib@2.8.1)
+      '@liff/logout': 2.31.2(tslib@2.8.1)
+      '@liff/native-bridge': 2.31.2(tslib@2.8.1)
+      '@liff/open-window': 2.31.2(tslib@2.8.1)
+      '@liff/permanent-link': 2.31.2(tslib@2.8.1)
+      '@liff/permission': 2.31.2(tslib@2.8.1)
+      '@liff/ready': 2.31.2(tslib@2.8.1)
+      '@liff/request-friendship': 2.31.2(tslib@2.8.1)
+      '@liff/scan-code-v2': 2.31.2(tslib@2.8.1)
+      '@liff/send-messages': 2.31.2(debug@4.4.3(supports-color@8.1.1))(supports-color@8.1.1)(tslib@2.8.1)
+      '@liff/share-target-picker': 2.31.2(debug@4.4.3(supports-color@8.1.1))(supports-color@8.1.1)(tslib@2.8.1)
+      '@liff/store': 2.31.2(tslib@2.8.1)
+      '@liff/sub-window': 2.31.2(tslib@2.8.1)
+      '@liff/use': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+    transitivePeerDependencies:
+      - debug
+      - supports-color
+
+  '@liff/logger@2.31.2(tslib@2.8.1)':
+    dependencies:
+      tslib: 2.8.1
+
+  '@liff/login@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/consts': 2.31.2(tslib@2.8.1)
+      '@liff/get-version': 2.31.2(tslib@2.8.1)
+      '@liff/hooks': 2.31.2(tslib@2.8.1)
+      '@liff/is-in-client': 2.31.2(tslib@2.8.1)
+      '@liff/is-sub-window': 2.31.2(tslib@2.8.1)
+      '@liff/logger': 2.31.2(tslib@2.8.1)
+      '@liff/server-api': 2.31.2(tslib@2.8.1)
+      '@liff/store': 2.31.2(tslib@2.8.1)
+      '@liff/sub-window': 2.31.2(tslib@2.8.1)
+      '@liff/use': 2.31.2(tslib@2.8.1)
+      '@liff/util': 2.31.2(tslib@2.8.1)
+      tiny-sha256: 1.0.2
+      tslib: 2.8.1
+
+  '@liff/logout@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/store': 2.31.2(tslib@2.8.1)
+      '@liff/use': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+
+  '@liff/message-bus@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/consts': 2.31.2(tslib@2.8.1)
+      '@liff/store': 2.31.2(tslib@2.8.1)
+      '@liff/util': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+
+  '@liff/native-bridge@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/consts': 2.31.2(tslib@2.8.1)
+      '@liff/logger': 2.31.2(tslib@2.8.1)
+      '@liff/store': 2.31.2(tslib@2.8.1)
+      '@liff/types': 2.31.2
+      '@liff/util': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+
+  '@liff/open-window@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/consts': 2.31.2(tslib@2.8.1)
+      '@liff/get-line-version': 2.31.2(tslib@2.8.1)
+      '@liff/get-os': 2.31.2(tslib@2.8.1)
+      '@liff/is-in-client': 2.31.2(tslib@2.8.1)
+      '@liff/native-bridge': 2.31.2(tslib@2.8.1)
+      '@liff/types': 2.31.2
+      '@liff/use': 2.31.2(tslib@2.8.1)
+      '@liff/util': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+
+  '@liff/permanent-link@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/consts': 2.31.2(tslib@2.8.1)
+      '@liff/server-api': 2.31.2(tslib@2.8.1)
+      '@liff/store': 2.31.2(tslib@2.8.1)
+      '@liff/use': 2.31.2(tslib@2.8.1)
+      '@liff/util': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+
+  '@liff/permission@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/consts': 2.31.2(tslib@2.8.1)
+      '@liff/is-api-available': 2.31.2(tslib@2.8.1)
+      '@liff/is-in-client': 2.31.2(tslib@2.8.1)
+      '@liff/server-api': 2.31.2(tslib@2.8.1)
+      '@liff/store': 2.31.2(tslib@2.8.1)
+      '@liff/sub-window': 2.31.2(tslib@2.8.1)
+      '@liff/use': 2.31.2(tslib@2.8.1)
+      '@liff/util': 2.31.2(tslib@2.8.1)
+      '@liff/verify-id-token': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+
+  '@liff/ready@2.31.2(tslib@2.8.1)':
+    dependencies:
+      tslib: 2.8.1
+
+  '@liff/request-friendship@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/consts': 2.31.2(tslib@2.8.1)
+      '@liff/is-api-available': 2.31.2(tslib@2.8.1)
+      '@liff/server-api': 2.31.2(tslib@2.8.1)
+      '@liff/store': 2.31.2(tslib@2.8.1)
+      '@liff/sub-window': 2.31.2(tslib@2.8.1)
+      '@liff/use': 2.31.2(tslib@2.8.1)
+      '@liff/util': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+
+  '@liff/scan-code-v2@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/consts': 2.31.2(tslib@2.8.1)
+      '@liff/is-api-available': 2.31.2(tslib@2.8.1)
+      '@liff/sub-window': 2.31.2(tslib@2.8.1)
+      '@liff/use': 2.31.2(tslib@2.8.1)
+      '@liff/util': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+
+  '@liff/scan-code@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/types': 2.31.2
+      tslib: 2.8.1
+
+  '@liff/send-messages@2.31.2(debug@4.4.3(supports-color@8.1.1))(supports-color@8.1.1)(tslib@2.8.1)':
+    dependencies:
+      '@liff/consts': 2.31.2(tslib@2.8.1)
+      '@liff/get-line-version': 2.31.2(tslib@2.8.1)
+      '@liff/get-os': 2.31.2(tslib@2.8.1)
+      '@liff/permission': 2.31.2(tslib@2.8.1)
+      '@liff/server-api': 2.31.2(tslib@2.8.1)
+      '@liff/use': 2.31.2(tslib@2.8.1)
+      '@liff/util': 2.31.2(tslib@2.8.1)
+      '@line/bot-sdk': 10.8.0(debug@4.4.3(supports-color@8.1.1))(supports-color@8.1.1)
+      tslib: 2.8.1
+    transitivePeerDependencies:
+      - debug
+      - supports-color
+
+  '@liff/server-api@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/consts': 2.31.2(tslib@2.8.1)
+      '@liff/store': 2.31.2(tslib@2.8.1)
+      '@liff/util': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+
+  '@liff/share-target-picker@2.31.2(debug@4.4.3(supports-color@8.1.1))(supports-color@8.1.1)(tslib@2.8.1)':
+    dependencies:
+      '@liff/analytics': 2.31.2(tslib@2.8.1)
+      '@liff/consts': 2.31.2(tslib@2.8.1)
+      '@liff/get-line-version': 2.31.2(tslib@2.8.1)
+      '@liff/get-os': 2.31.2(tslib@2.8.1)
+      '@liff/is-api-available': 2.31.2(tslib@2.8.1)
+      '@liff/is-in-client': 2.31.2(tslib@2.8.1)
+      '@liff/is-logged-in': 2.31.2(tslib@2.8.1)
+      '@liff/is-sub-window': 2.31.2(tslib@2.8.1)
+      '@liff/logger': 2.31.2(tslib@2.8.1)
+      '@liff/send-messages': 2.31.2(debug@4.4.3(supports-color@8.1.1))(supports-color@8.1.1)(tslib@2.8.1)
+      '@liff/server-api': 2.31.2(tslib@2.8.1)
+      '@liff/store': 2.31.2(tslib@2.8.1)
+      '@liff/types': 2.31.2
+      '@liff/use': 2.31.2(tslib@2.8.1)
+      '@liff/util': 2.31.2(tslib@2.8.1)
+      '@liff/window-postmessage': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+    transitivePeerDependencies:
+      - debug
+      - supports-color
+
+  '@liff/store@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/consts': 2.31.2(tslib@2.8.1)
+      '@liff/is-in-client': 2.31.2(tslib@2.8.1)
+      '@liff/types': 2.31.2
+      '@liff/use': 2.31.2(tslib@2.8.1)
+      '@liff/util': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+
+  '@liff/sub-window@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/close-window': 2.31.2(tslib@2.8.1)
+      '@liff/consts': 2.31.2(tslib@2.8.1)
+      '@liff/get-os': 2.31.2(tslib@2.8.1)
+      '@liff/is-api-available': 2.31.2(tslib@2.8.1)
+      '@liff/is-in-client': 2.31.2(tslib@2.8.1)
+      '@liff/is-sub-window': 2.31.2(tslib@2.8.1)
+      '@liff/logger': 2.31.2(tslib@2.8.1)
+      '@liff/message-bus': 2.31.2(tslib@2.8.1)
+      '@liff/server-api': 2.31.2(tslib@2.8.1)
+      '@liff/store': 2.31.2(tslib@2.8.1)
+      '@liff/use': 2.31.2(tslib@2.8.1)
+      '@liff/util': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+
+  '@liff/types@2.31.2': {}
+
+  '@liff/use@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/hooks': 2.31.2(tslib@2.8.1)
+      '@liff/logger': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+
+  '@liff/util@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/consts': 2.31.2(tslib@2.8.1)
+      '@liff/logger': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+
+  '@liff/verify-id-token@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/consts': 2.31.2(tslib@2.8.1)
+      '@liff/server-api': 2.31.2(tslib@2.8.1)
+      '@liff/util': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+
+  '@liff/window-postmessage@2.31.2(tslib@2.8.1)':
+    dependencies:
+      '@liff/consts': 2.31.2(tslib@2.8.1)
+      '@liff/logger': 2.31.2(tslib@2.8.1)
+      '@liff/util': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+
+  '@line/bot-sdk@10.8.0(debug@4.4.3(supports-color@8.1.1))(supports-color@8.1.1)':
+    dependencies:
+      '@types/node': 24.19.2
+    optionalDependencies:
+      axios: 1.21.0(debug@4.4.3(supports-color@8.1.1))(supports-color@8.1.1)
+    transitivePeerDependencies:
+      - debug
+      - supports-color
+
+  '@line/liff@2.31.2(debug@4.4.3(supports-color@8.1.1))(supports-color@8.1.1)':
+    dependencies:
+      '@liff/activity': 2.31.2(tslib@2.8.1)
+      '@liff/analytics': 2.31.2(tslib@2.8.1)
+      '@liff/calendar': 2.31.2(tslib@2.8.1)
+      '@liff/close-window': 2.31.2(tslib@2.8.1)
+      '@liff/consts': 2.31.2(tslib@2.8.1)
+      '@liff/core': 2.31.2(tslib@2.8.1)
+      '@liff/create-shortcut-on-home-screen': 2.31.2(tslib@2.8.1)
+      '@liff/extensions': 2.31.2(tslib@2.8.1)
+      '@liff/get-app-language': 2.31.2(tslib@2.8.1)
+      '@liff/get-friendship': 2.31.2(tslib@2.8.1)
+      '@liff/get-language': 2.31.2(tslib@2.8.1)
+      '@liff/get-line-version': 2.31.2(tslib@2.8.1)
+      '@liff/get-origins': 2.31.2(tslib@2.8.1)
+      '@liff/get-os': 2.31.2(tslib@2.8.1)
+      '@liff/get-profile': 2.31.2(tslib@2.8.1)
+      '@liff/get-version': 2.31.2(tslib@2.8.1)
+      '@liff/hooks': 2.31.2(tslib@2.8.1)
+      '@liff/i18n': 2.31.2(tslib@2.8.1)
+      '@liff/iap': 2.31.2(tslib@2.8.1)
+      '@liff/init': 2.31.2(tslib@2.8.1)
+      '@liff/is-api-available': 2.31.2(tslib@2.8.1)
+      '@liff/is-in-client': 2.31.2(tslib@2.8.1)
+      '@liff/is-logged-in': 2.31.2(tslib@2.8.1)
+      '@liff/is-sub-window': 2.31.2(tslib@2.8.1)
+      '@liff/liff-types': 2.31.2(debug@4.4.3(supports-color@8.1.1))(supports-color@8.1.1)(tslib@2.8.1)
+      '@liff/login': 2.31.2(tslib@2.8.1)
+      '@liff/logout': 2.31.2(tslib@2.8.1)
+      '@liff/native-bridge': 2.31.2(tslib@2.8.1)
+      '@liff/open-window': 2.31.2(tslib@2.8.1)
+      '@liff/permanent-link': 2.31.2(tslib@2.8.1)
+      '@liff/permission': 2.31.2(tslib@2.8.1)
+      '@liff/ready': 2.31.2(tslib@2.8.1)
+      '@liff/request-friendship': 2.31.2(tslib@2.8.1)
+      '@liff/scan-code-v2': 2.31.2(tslib@2.8.1)
+      '@liff/send-messages': 2.31.2(debug@4.4.3(supports-color@8.1.1))(supports-color@8.1.1)(tslib@2.8.1)
+      '@liff/server-api': 2.31.2(tslib@2.8.1)
+      '@liff/share-target-picker': 2.31.2(debug@4.4.3(supports-color@8.1.1))(supports-color@8.1.1)(tslib@2.8.1)
+      '@liff/store': 2.31.2(tslib@2.8.1)
+      '@liff/sub-window': 2.31.2(tslib@2.8.1)
+      '@liff/use': 2.31.2(tslib@2.8.1)
+      '@liff/util': 2.31.2(tslib@2.8.1)
+      tslib: 2.8.1
+      whatwg-fetch: 3.6.20
+    transitivePeerDependencies:
+      - debug
+      - supports-color
+
+  '@listr2/prompt-adapter-inquirer@4.2.7(@inquirer/prompts@8.7.2(@types/node@24.19.2))(@types/node@24.19.2)(listr2@11.1.0)':
+    dependencies:
+      '@inquirer/prompts': 8.7.2(@types/node@24.19.2)
+      '@inquirer/type': 4.2.1(@types/node@24.19.2)
       listr2: 11.1.0
     transitivePeerDependencies:
       - '@types/node'
@@ -3478,20 +4428,31 @@ snapshots:
 
   '@types/jsesc@2.5.1': {}
 
-  '@vitejs/plugin-basic-ssl@2.3.0(vite@8.3.5(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.1)(sass@1.104.1))':
+  '@types/node@24.19.2':
     dependencies:
-      vite: 8.3.5(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.1)(sass@1.104.1)
+      undici-types: 7.24.6
 
-  '@vitest/mocker@5.0.5(vite@8.3.5(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.1)(sass@1.104.1))':
+  '@vitejs/plugin-basic-ssl@2.3.0(vite@8.3.5(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.1)(sass@1.104.1))':
+    dependencies:
+      vite: 8.3.5(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.1)(sass@1.104.1)
+
+  '@vitest/mocker@5.0.5(vite@8.3.5(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.1)(sass@1.104.1))':
     dependencies:
       '@jridgewell/trace-mapping': 0.3.31
       '@vitest/spy': 5.0.5
       estree-walker: 3.0.3
       magic-string: 1.4.5
     optionalDependencies:
-      vite: 8.3.5(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.1)(sass@1.104.1)
+      vite: 8.3.5(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.1)(sass@1.104.1)
 
   '@vitest/spy@5.0.5': {}
+
+  agent-base@6.0.2(supports-color@8.1.1):
+    dependencies:
+      debug: 4.4.3(supports-color@8.1.1)
+    transitivePeerDependencies:
+      - supports-color
+    optional: true
 
   agent-base@9.0.0: {}
 
@@ -3515,6 +4476,20 @@ snapshots:
   ansi-styles@6.2.3: {}
 
   assertion-error@2.0.1: {}
+
+  asynckit@0.4.0:
+    optional: true
+
+  axios@1.21.0(debug@4.4.3(supports-color@8.1.1))(supports-color@8.1.1):
+    dependencies:
+      follow-redirects: 1.16.2(debug@4.4.3(supports-color@8.1.1))
+      form-data: 4.0.6
+      https-proxy-agent: 5.0.1(supports-color@8.1.1)
+      proxy-from-env: 2.1.0
+    transitivePeerDependencies:
+      - debug
+      - supports-color
+    optional: true
 
   baseline-browser-mapping@2.11.34: {}
 
@@ -3545,6 +4520,12 @@ snapshots:
       update-browserslist-db: 1.3.4(browserslist@4.29.5)
 
   buffer-from@1.1.2: {}
+
+  call-bind-apply-helpers@1.0.2:
+    dependencies:
+      es-errors: 1.3.0
+      function-bind: 1.1.2
+    optional: true
 
   caniuse-lite@1.0.30001820: {}
 
@@ -3578,6 +4559,11 @@ snapshots:
       wrap-ansi: 9.0.2
 
   colorjs.io@0.7.1: {}
+
+  combined-stream@1.0.8:
+    dependencies:
+      delayed-stream: 1.0.0
+    optional: true
 
   convert-source-map@1.9.0: {}
 
@@ -3613,6 +4599,9 @@ snapshots:
 
   decimal.js@10.6.0: {}
 
+  delayed-stream@1.0.0:
+    optional: true
+
   detect-libc@2.1.2: {}
 
   dom-serializer@3.1.1:
@@ -3633,6 +4622,13 @@ snapshots:
       domelementtype: 3.0.0
       domhandler: 6.0.1
 
+  dunder-proto@1.0.1:
+    dependencies:
+      call-bind-apply-helpers: 1.0.2
+      es-errors: 1.3.0
+      gopd: 1.2.0
+    optional: true
+
   electron-to-chromium@1.5.467: {}
 
   emoji-regex@10.6.0: {}
@@ -3648,7 +4644,26 @@ snapshots:
 
   environment@1.1.0: {}
 
+  es-define-property@1.0.1:
+    optional: true
+
+  es-errors@1.3.0:
+    optional: true
+
   es-module-lexer@2.3.2: {}
+
+  es-object-atoms@1.1.2:
+    dependencies:
+      es-errors: 1.3.0
+    optional: true
+
+  es-set-tostringtag@2.1.0:
+    dependencies:
+      es-errors: 1.3.0
+      get-intrinsic: 1.3.0
+      has-tostringtag: 1.0.2
+      hasown: 2.0.4
+    optional: true
 
   esbuild@0.28.2:
     optionalDependencies:
@@ -3707,7 +4722,24 @@ snapshots:
 
   flru@1.0.2: {}
 
+  follow-redirects@1.16.2(debug@4.4.3(supports-color@8.1.1)):
+    optionalDependencies:
+      debug: 4.4.3(supports-color@8.1.1)
+    optional: true
+
+  form-data@4.0.6:
+    dependencies:
+      asynckit: 0.4.0
+      combined-stream: 1.0.8
+      es-set-tostringtag: 2.1.0
+      hasown: 2.0.4
+      mime-types: 2.1.35
+    optional: true
+
   fsevents@2.3.3:
+    optional: true
+
+  function-bind@1.1.2:
     optional: true
 
   gensync@1.0.0-beta.2: {}
@@ -3716,9 +4748,45 @@ snapshots:
 
   get-east-asian-width@1.7.0: {}
 
+  get-intrinsic@1.3.0:
+    dependencies:
+      call-bind-apply-helpers: 1.0.2
+      es-define-property: 1.0.1
+      es-errors: 1.3.0
+      es-object-atoms: 1.1.2
+      function-bind: 1.1.2
+      get-proto: 1.0.1
+      gopd: 1.2.0
+      has-symbols: 1.1.0
+      hasown: 2.0.4
+      math-intrinsics: 1.1.0
+    optional: true
+
+  get-proto@1.0.1:
+    dependencies:
+      dunder-proto: 1.0.1
+      es-object-atoms: 1.1.2
+    optional: true
+
+  gopd@1.2.0:
+    optional: true
+
   graceful-fs@4.2.11: {}
 
   has-flag@4.0.0: {}
+
+  has-symbols@1.1.0:
+    optional: true
+
+  has-tostringtag@1.0.2:
+    dependencies:
+      has-symbols: 1.1.0
+    optional: true
+
+  hasown@2.0.4:
+    dependencies:
+      function-bind: 1.1.2
+    optional: true
 
   hosted-git-info@10.1.1:
     dependencies:
@@ -3736,6 +4804,14 @@ snapshots:
       domhandler: 6.0.1
       domutils: 4.0.2
       entities: 8.1.0
+
+  https-proxy-agent@5.0.1(supports-color@8.1.1):
+    dependencies:
+      agent-base: 6.0.2(supports-color@8.1.1)
+      debug: 4.4.3(supports-color@8.1.1)
+    transitivePeerDependencies:
+      - supports-color
+    optional: true
 
   https-proxy-agent@9.1.0(supports-color@8.1.1):
     dependencies:
@@ -3957,7 +5033,18 @@ snapshots:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.6.0
 
+  math-intrinsics@1.1.0:
+    optional: true
+
   mdn-data@2.27.1: {}
+
+  mime-db@1.52.0:
+    optional: true
+
+  mime-types@2.1.35:
+    dependencies:
+      mime-db: 1.52.0
+    optional: true
 
   mimic-function@5.0.1: {}
 
@@ -4094,6 +5181,9 @@ snapshots:
   proc-log@7.0.0: {}
 
   proxy-agent-negotiate@1.1.0: {}
+
+  proxy-from-env@2.1.0:
+    optional: true
 
   punycode@2.3.1: {}
 
@@ -4287,6 +5377,8 @@ snapshots:
 
   tapable@2.3.3: {}
 
+  tiny-sha256@1.0.2: {}
+
   tinybench@6.2.2: {}
 
   tinyexec@1.3.1: {}
@@ -4314,6 +5406,8 @@ snapshots:
 
   typescript@6.0.3: {}
 
+  undici-types@7.24.6: {}
+
   undici@8.12.3: {}
 
   update-browserslist-db@1.3.4(browserslist@4.29.5):
@@ -4330,7 +5424,7 @@ snapshots:
 
   verkit@0.5.0: {}
 
-  vite@8.3.5(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.1)(sass@1.104.1):
+  vite@8.3.5(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.1)(sass@1.104.1):
     dependencies:
       lightningcss: 1.33.0
       picomatch: 4.0.7
@@ -4338,16 +5432,17 @@ snapshots:
       rolldown: 1.2.15
       tinyglobby: 0.2.17
     optionalDependencies:
+      '@types/node': 24.19.2
       esbuild: 0.28.2
       fsevents: 2.3.3
       jiti: 2.7.0
       sass: 1.104.1
       sass-embedded: 1.104.1
 
-  vitest@5.0.5(jsdom@30.1.3)(vite@8.3.5(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.1)(sass@1.104.1)):
+  vitest@5.0.5(@types/node@24.19.2)(jsdom@30.1.3)(vite@8.3.5(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.1)(sass@1.104.1)):
     dependencies:
       '@types/chai': 5.2.3
-      '@vitest/mocker': 5.0.5(vite@8.3.5(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.1)(sass@1.104.1))
+      '@vitest/mocker': 5.0.5(vite@8.3.5(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.1)(sass@1.104.1))
       chai: 6.3.0
       es-module-lexer: 2.3.2
       expect-type: 1.4.0
@@ -4358,9 +5453,10 @@ snapshots:
       tinybench: 6.2.2
       tinyexec: 1.3.1
       tinyglobby: 0.2.17
-      vite: 8.3.5(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.1)(sass@1.104.1)
+      vite: 8.3.5(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.1)(sass@1.104.1)
       why-is-node-running: 3.2.1
     optionalDependencies:
+      '@types/node': 24.19.2
       jsdom: 30.1.3
     transitivePeerDependencies:
       - msw
@@ -4373,6 +5469,8 @@ snapshots:
     optional: true
 
   webidl-conversions@8.0.1: {}
+
+  whatwg-fetch@3.6.20: {}
 
   whatwg-mimetype@5.0.0: {}
 
