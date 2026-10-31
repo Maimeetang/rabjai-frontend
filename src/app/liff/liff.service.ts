@@ -26,7 +26,7 @@ export class LiffService {
     liff.login();
   }
 
-  getIdToken(): string | null {
+  async getIdToken(): Promise<string | null> {
     return liff.getIDToken();
   }
 

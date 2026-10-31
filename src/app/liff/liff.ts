@@ -1,5 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { LiffService } from './liff.service';
+import { AuthService } from '../auth/auth.service';
 import { Spinner } from '../components/spinner/spinner';
 
 @Component({
@@ -9,6 +10,7 @@ import { Spinner } from '../components/spinner/spinner';
 })
 export class Liff implements OnInit {
   private liffService = inject(LiffService);
+  private authService = inject(AuthService);
 
   async ngOnInit() {
     try {
@@ -17,13 +19,13 @@ export class Liff implements OnInit {
         this.liffService.login();
       }
 
-      const idToken = this.liffService.getIdToken();
+      const idToken = await this.liffService.getIdToken();
+      console.log(idToken);
       if (!idToken) {
         throw new Error('ID Token not found');
       }
 
-      // Sent idToken to backend to authen
-      console.log('LINE Login successful');
+      await this.authService.loginWithLine(idToken);
     } catch (error) {
       console.error('LIFF Error:', error);
     }
