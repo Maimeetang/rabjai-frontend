@@ -1,7 +1,16 @@
 import { Injectable, inject, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
-import { environment } from '../../environments/environment.development';
+
+export interface UserProfile {
+  id: number;
+  lineUserId: string;
+  name: string;
+  pictureUrl: string;
+  role: string;
+}
+
+type AuthStatus = 'checking' | 'authenticated' | 'unauthenticated';
 
 @Injectable({
   providedIn: 'root',
@@ -9,18 +18,40 @@ import { environment } from '../../environments/environment.development';
 export class AuthService {
   private http = inject(HttpClient);
 
-  isAuthenticated = signal<boolean>(false);
+  authStatus = signal<AuthStatus>('checking');
+  userProfile = signal<UserProfile | null>(null);
 
   async loginWithLine(idToken: string) {
     try {
-      const response = await firstValueFrom(
+      await firstValueFrom(
         this.http.post<{ token: string }>('/api/auth/line', { idToken }, { withCredentials: true }),
       );
-      this.isAuthenticated.set(true);
-      console.log('Login Success');
+      this.authStatus.set('authenticated');
     } catch (error) {
-      console.error('Login Fail:', error);
-      this.isAuthenticated.set(false);
+      this.authStatus.set('unauthenticated');
+      throw error;
+    }
+  }
+
+  async checkAuth(): Promise<boolean> {
+    this.authStatus.set('checking');
+
+    try {
+      const profile = await firstValueFrom(
+        this.http.get<UserProfile>('/api/users/profile', {
+          withCredentials: true,
+        }),
+      );
+
+      this.userProfile.set(profile);
+      this.authStatus.set('authenticated');
+
+      return true;
+    } catch {
+      this.userProfile.set(null);
+      this.authStatus.set('unauthenticated');
+
+      return false;
     }
   }
 }
