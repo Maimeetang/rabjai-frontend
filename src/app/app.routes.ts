@@ -3,7 +3,7 @@ import { authGuard } from './auth/auth.guard';
 import { Liff } from './liff/liff';
 import { Home } from './home/home';
 import { LiffLayout } from './liff/layout/liff-layout';
-import { Summary } from './liff/summary/summary';
+import { Summary } from './liff/summaries/summaries';
 
 export const routes: Routes = [
   {
@@ -16,12 +16,12 @@ export const routes: Routes = [
     component: Liff,
   },
   {
-    path: 'liff',
+    path: 'liff/:accountId',
     canActivate: [authGuard],
     component: LiffLayout,
     children: [
       {
-        path: 'summary',
+        path: 'summaries',
         component: Summary,
       },
     ],

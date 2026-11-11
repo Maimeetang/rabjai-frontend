@@ -2,7 +2,9 @@ import { Component, inject, OnInit } from '@angular/core';
 import { LiffService } from './liff.service';
 import { AuthService } from '../auth/auth.service';
 import { Spinner } from '../components/spinner/spinner';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AccountService } from './accounts/account.service';
+import { firstValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-liff',
@@ -12,28 +14,45 @@ import { Router } from '@angular/router';
 export class Liff implements OnInit {
   private liffService = inject(LiffService);
   private authService = inject(AuthService);
+  private accountService = inject(AccountService);
   private router = inject(Router);
+  private route = inject(ActivatedRoute);
 
   async ngOnInit() {
-    const isAuthenticated = await this.authService.checkAuth();
-    if (isAuthenticated) {
-      await this.router.navigate(['/liff/summary']);
-      return;
-    }
+    const returnUrl = this.route.snapshot.queryParamMap.get('returnUrl');
 
     try {
-      await this.liffService.initialize();
-      if (!this.liffService.isLoggedIn()) {
-        this.liffService.login();
+      const isAuthenticated = await this.authService.checkAuth();
+
+      let accountId: number;
+
+      if (isAuthenticated) {
+        const account = await firstValueFrom(this.accountService.getPersonalAccount());
+        accountId = account.id;
+      } else {
+        await this.liffService.initialize();
+
+        if (!this.liffService.isLoggedIn()) {
+          this.liffService.login();
+          return;
+        }
+
+        const idToken = this.liffService.getIdToken();
+
+        if (!idToken) {
+          throw new Error('ID Token not found');
+        }
+
+        await this.authService.loginWithLine(idToken);
+        const account = await firstValueFrom(this.accountService.getPersonalAccount());
+        accountId = account.id;
       }
 
-      const idToken = this.liffService.getIdToken();
-      if (!idToken) {
-        throw new Error('ID Token not found');
-      }
+      const redirectUrl = returnUrl?.startsWith('/liff/')
+        ? returnUrl
+        : `/liff/${accountId}/summaries`;
 
-      await this.authService.loginWithLine(idToken);
-      await this.router.navigate(['/liff/summary']);
+      await this.router.navigateByUrl(redirectUrl);
     } catch (error) {
       console.error('LIFF Error:', error);
     }

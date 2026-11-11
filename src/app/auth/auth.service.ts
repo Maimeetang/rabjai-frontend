@@ -3,10 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
 
 export interface UserProfile {
-  id: number;
-  lineUserId: string;
+  id: string;
   name: string;
-  pictureUrl: string;
   role: string;
 }
 
