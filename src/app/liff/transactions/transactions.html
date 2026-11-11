@@ -1,0 +1,44 @@
+<div class="h-full min-h-0 flex flex-col">
+  <app-date-filter (dateRangeChange)="onDateRangeChange($event)" />
+
+  <div
+    class="flex-1 min-h-0 overflow-auto rounded-box border border-base-content/5 bg-base-100 mt-2"
+  >
+    <table class="table table-pin-rows">
+      <thead>
+        <tr>
+          <th>วันที่</th>
+          <th>รายละเอียด</th>
+          <th>หมวดหมู่</th>
+          <th class="text-right">จำนวนเงิน</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        @if (isLoading) {
+          <tr>
+            <td colspan="4" class="text-center py-10">
+              <span class="loading loading-spinner loading-md"></span>
+              <p class="mt-2 text-base-content/50">กำลังโหลดข้อมูล...</p>
+            </td>
+          </tr>
+        } @else if (transactions.length === 0) {
+          <tr>
+            <td colspan="4" class="text-center py-10 text-base-content/50">ไม่พบรายการ</td>
+          </tr>
+        } @else {
+          @for (item of transactions; track item.id) {
+            <tr>
+              <td>{{ item.transactionDate | date: 'dd/MM/yyyy' }}</td>
+              <td>{{ item.description }}</td>
+              <td>{{ item.category.name }}</td>
+              <td class="text-right font-medium">
+                {{ item.amount | number: '1.2-2' }}
+              </td>
+            </tr>
+          }
+        }
+      </tbody>
+    </table>
+  </div>
+</div>

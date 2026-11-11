@@ -3,7 +3,9 @@ import { authGuard } from './auth/auth.guard';
 import { Liff } from './liff/liff';
 import { Home } from './home/home';
 import { LiffLayout } from './liff/layout/liff-layout';
-import { Summary } from './liff/summaries/summaries';
+import { Summaries } from './liff/summaries/summaries';
+import { Placeholder } from './components/placeholder/placeholder';
+import { Transactions } from './liff/transactions/transactions';
 
 export const routes: Routes = [
   {
@@ -22,7 +24,15 @@ export const routes: Routes = [
     children: [
       {
         path: 'summaries',
-        component: Summary,
+        component: Placeholder,
+      },
+      {
+        path: 'transactions',
+        component: Transactions,
+      },
+      {
+        path: 'categories',
+        component: Placeholder,
       },
     ],
   },

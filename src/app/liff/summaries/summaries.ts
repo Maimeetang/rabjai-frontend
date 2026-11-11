@@ -4,4 +4,4 @@ import { Component } from '@angular/core';
   selector: 'app-summaries',
   templateUrl: `./summaries.html`,
 })
-export class Summary {}
+export class Summaries {}
