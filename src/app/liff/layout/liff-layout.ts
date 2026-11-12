@@ -14,5 +14,5 @@ export class LiffLayout {
   private route = inject(ActivatedRoute);
 
   userProfile = this.authService.userProfile;
-  accountId = this.route.snapshot.paramMap.get('accountId');
+  accountId = this.route.snapshot.paramMap.get('accountId')!;
 }

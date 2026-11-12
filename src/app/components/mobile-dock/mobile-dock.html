@@ -1,17 +1,47 @@
-<nav class="dock dock-md md:hidden">
+<nav class="dock dock-md md:hidden z-50 pb-[env(safe-area-inset-bottom)]">
+  <!-- Summary -->
   <a
-    routerLink="/liff/summary"
+    [routerLink]="['/liff', accountId(), 'summaries']"
     routerLinkActive="dock-active"
     [routerLinkActiveOptions]="{ exact: true }"
   >
-    <span>Summary</span>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      stroke-width="2"
+      fill="none"
+      stroke="currentColor"
+      class="my-1.5 inline-block size-4"
+    >
+      <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
+      <path
+        d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+      ></path>
+    </svg>
+    <span class="dock-label">สรุป</span>
   </a>
 
-  <a routerLink="/liff/transactions" routerLinkActive="dock-active">
-    <span>Transactions</span>
-  </a>
-
-  <a routerLink="/liff/settings" routerLinkActive="dock-active">
-    <span>Settings</span>
+  <!-- Transactions -->
+  <a [routerLink]="['/liff', accountId(), 'transactions']" routerLinkActive="dock-active">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="size-5"
+    >
+      <path d="M8 6h13" />
+      <path d="M8 12h13" />
+      <path d="M8 18h13" />
+      <path d="M3 6h.01" />
+      <path d="M3 12h.01" />
+      <path d="M3 18h.01" />
+    </svg>
+    <span class="dock-label">รายการ</span>
   </a>
 </nav>

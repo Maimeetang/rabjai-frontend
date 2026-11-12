@@ -1,44 +1,132 @@
 <div class="h-full min-h-0 flex flex-col">
   <app-date-filter (dateRangeChange)="onDateRangeChange($event)" />
 
-  <div
-    class="flex-1 min-h-0 overflow-auto rounded-box border border-base-content/5 bg-base-100 mt-2"
-  >
-    <table class="table table-pin-rows">
-      <thead>
-        <tr>
-          <th>วันที่</th>
-          <th>รายละเอียด</th>
-          <th>หมวดหมู่</th>
-          <th class="text-right">จำนวนเงิน</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        @if (isLoading) {
-          <tr>
-            <td colspan="4" class="text-center py-10">
-              <span class="loading loading-spinner loading-md"></span>
-              <p class="mt-2 text-base-content/50">กำลังโหลดข้อมูล...</p>
-            </td>
-          </tr>
-        } @else if (transactions.length === 0) {
-          <tr>
-            <td colspan="4" class="text-center py-10 text-base-content/50">ไม่พบรายการ</td>
-          </tr>
-        } @else {
-          @for (item of transactions; track item.id) {
+  @if (isLoading()) {
+    <div class="flex flex-col items-center justify-center py-10 text-base-content/50">
+      <span class="loading loading-spinner loading-md"></span>
+      <p class="mt-2">กำลังโหลดข้อมูล...</p>
+    </div>
+  } @else if (transactions().length === 0) {
+    <div class="text-center py-10 text-base-content/50">ไม่พบรายการ</div>
+  } @else {
+    <!-- Desktop: Table -->
+    <div
+      class="hidden lg:block flex-1 min-h-0 overflow-auto lg:rounded-box lg:border lg:border-base-content/5 mt-2"
+    >
+      <div class="bg-base-100">
+        <table class="table table-pin-rows">
+          <thead>
             <tr>
-              <td>{{ item.transactionDate | date: 'dd/MM/yyyy' }}</td>
-              <td>{{ item.description }}</td>
-              <td>{{ item.category.name }}</td>
-              <td class="text-right font-medium">
-                {{ item.amount | number: '1.2-2' }}
-              </td>
+              <th>วันที่</th>
+              <th>รายละเอียด</th>
+              <th>หมวดหมู่</th>
+              <th class="text-right">จำนวนเงิน</th>
             </tr>
-          }
+          </thead>
+
+          <tbody>
+            @for (item of transactions(); track item.id) {
+              <tr>
+                <td class="text-gray-600">
+                  {{ item.transactionDate | date: 'd MMM yyyy' : '' : 'th' }}
+                </td>
+
+                <td>{{ item.description }}</td>
+
+                <td>
+                  <span class="badge bg-base-300 text-gray-600">
+                    {{ item.category.name }}
+                  </span>
+                </td>
+
+                <td
+                  class="text-right font-bold"
+                  [ngClass]="{
+                    'text-error': item.category.type === 'EXPENSE',
+                    'text-success': item.category.type === 'INCOME',
+                  }"
+                >
+                  {{ item.category.type === 'EXPENSE' ? '-฿' : '+฿' }}
+                  {{ item.amount | number: '1.2-2' }}
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Mobile / Tablet: Cards grouped by date -->
+    <div class="lg:hidden flex-1 min-h-0 overflow-auto mt-2 pb-20">
+      <div class="p-2 space-y-4">
+        @for (group of groupedTransactions(); track group.date) {
+          <section>
+            <!-- Date Header -->
+            <div class="flex items-center justify-between px-3 py-2 border-b-2 border-base-300">
+              <span class="text-sm text-base-content/70">
+                {{ group.date | date: 'd MMM' : '' : 'th' }}
+              </span>
+
+              <span
+                class="font-bold text-sm"
+                [ngClass]="{
+                  'text-error': group.total < 0,
+                  'text-success': group.total > 0,
+                }"
+              >
+                รวม:
+                {{ group.total > 0 ? '+' : '' }}฿{{ group.total | number: '1.0-2' }}
+              </span>
+            </div>
+
+            <!-- Transaction Cards -->
+            <div class="space-y-2 mt-3">
+              @for (item of group.items; track item.id) {
+                <div class="card border border-base-300 bg-base-100">
+                  <div class="card-body p-4 flex-row items-center justify-between gap-2">
+                    <!-- Details -->
+                    <div class="min-w-0 flex-1">
+                      <p class="font-bold truncate">
+                        {{ item.description || item.category.name }}
+                      </p>
+
+                      <div class="flex items-center gap-2 mt-1">
+                        <span class="text-sm text-base-content/60">
+                          {{ item.transactionDate | date: 'HH:mm น.' : '' : 'th' }}
+                        </span>
+
+                        <span class="badge bg-base-300 text-gray-600">
+                          {{ item.category.name }}
+                        </span>
+                      </div>
+                    </div>
+
+                    <!-- Amount -->
+                    <div class="flex items-center gap-2 shrink-0">
+                      <span
+                        class="font-semibold"
+                        [ngClass]="{
+                          'text-error': item.category.type === 'EXPENSE',
+                          'text-success': item.category.type === 'INCOME',
+                        }"
+                      >
+                        {{ item.category.type === 'EXPENSE' ? '-' : '+' }}฿{{
+                          item.amount | number: '1.0-2'
+                        }}
+                      </span>
+
+                      <!-- <icon
+                        name="chevron-right"
+                        class="text-base-content/40"
+                      /> -->
+                    </div>
+                  </div>
+                </div>
+              }
+            </div>
+          </section>
         }
-      </tbody>
-    </table>
-  </div>
+      </div>
+    </div>
+  }
 </div>

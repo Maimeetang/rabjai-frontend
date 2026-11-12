@@ -2,7 +2,7 @@
   <input id="my-drawer-4" type="checkbox" class="drawer-toggle inline" checked />
   <div class="drawer-content h-dvh min-h-0 overflow-hidden">
     <!-- Page content here -->
-    <div class="h-full min-h-0 flex flex-col p-4">
+    <div class="h-full min-h-0 flex flex-col p-4 bg-base-200">
       <router-outlet />
     </div>
   </div>
@@ -17,7 +17,7 @@
         class="flex flex-row items-center justify-between w-full px-3 py-3 is-drawer-close:px-0 is-drawer-close:flex-col"
       >
         <div
-          class="flex items-center gap-3 p-3 w-full rounded-2xl hover:bg-base-300 hover:cursor-pointer"
+          class="flex items-center gap-3 p-3 w-full rounded-selector hover:bg-base-300 hover:cursor-pointer"
         >
           <div class="avatar">
             <div class="size-10 rounded-full">
@@ -60,7 +60,7 @@
         <!-- Summary -->
         <li>
           <a
-            class="is-drawer-close:tooltip is-drawer-close:tooltip-right rounded-md"
+            class="is-drawer-close:tooltip is-drawer-close:tooltip-right rounded-selector"
             data-tip="สรุป"
             [routerLink]="['/liff', accountId, 'summaries']"
             routerLinkActive="bg-base-300"
@@ -92,7 +92,7 @@
             [routerLink]="['/liff', accountId, 'transactions']"
             routerLinkActive="bg-base-300"
             [routerLinkActiveOptions]="{ exact: true }"
-            class="is-drawer-close:tooltip is-drawer-close:tooltip-right rounded-md"
+            class="is-drawer-close:tooltip is-drawer-close:tooltip-right rounded-selector"
             data-tip="รายการ"
           >
             <svg
@@ -117,6 +117,6 @@
         </li>
       </ul>
     </div>
-    <app-mobile-dock />
   </div>
+  <app-mobile-dock [accountId]="accountId" />
 </div>
