@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  liffId: '',
+  liffId: '2012309148-Yw2nvN28',
 };
